@@ -2,7 +2,7 @@
 
 This is the PyTorch companion code for the paper:
 
-*Bolin Zhang, Haruya Kyutoku, Keisuke Doman, Takahiro Komamizu, Ichiro Ide, Jiangbo Qian.* **Cross-modal Recipe Retrieval based on Unified Text Encoder with Fine-grained Contrastive Learning**, Knowledge-Based Systems, 2024. (Revise)
+*Bolin Zhang, Haruya Kyutoku, Keisuke Doman, Takahiro Komamizu, Ichiro Ide, Jiangbo Qian.* **Cross-modal Recipe Retrieval based on Unified Text Encoder with Fine-grained Contrastive Learning**, Knowledge-Based Systems, 2024.
 
 # Installation
 
