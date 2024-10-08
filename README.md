@@ -23,7 +23,7 @@ conda activate UTE_FCL
 
 
 
-## Data preparation
+## Recipe1M Data preparation
 
 
 
@@ -51,8 +51,12 @@ python preprocessing.py --root DATASET_PATH
 
 This process will create auxiliary files under `DATASET_PATH/traindata`, which will be used for training.
 
-## Training
+## Flickr30k Data preparation
 
+- Download & uncompress Flickr30k [dataset](), put it under "src" folder.
+ 
+
+## Training
 
 
 - Launch training with:
