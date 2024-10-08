@@ -1,0 +1,22 @@
+name: UTE_FCL
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - pytorch
+  - conda-forge
+dependencies:
+  - python
+  - pip=22.3.1
+  - nltk=3.6.7
+  - scikit-learn=1.1.3
+  - numpy=1.23.4
+  - pillow=9.2.0
+  - pytorch=1.12.1
+  - torchvision=0.13.0
+  - tqdm
+  - pip:
+    - tensorboard==2.9.0
+    - tensorboardx==2.5.1
+    - timm==0.4.12
+    - wordcloud==1.8.2.2
