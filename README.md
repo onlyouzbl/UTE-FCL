@@ -62,37 +62,24 @@ This process will create auxiliary files under `DATASET_PATH/traindata`, which w
 - Launch training with:
 
 ```
-python train.py --model_name model --root DATASET_PATH --save_dir /path/to/saved/model/checkpoints
+CUDA_VISIBLE_DEVICES=0,1, python train.py --model_name model --root DATASET_PATH --save_dir saved_checkpoints --log_dir LOG_DIR 
 ```
-
-
-
-Tensorboard logging can be enabled with `--tensorboard`. Then, from the checkpoints directory run:
-
-```
-tensorboard --logdir "./" --port PORT
-```
-
-
 
 Run `python train.py --help` for the full list of available arguments.
 
 ## Evaluation
 
 
-
-- Extract features from the trained model for the test set samples of Recipe1M:
+- Extract features from the trained model for the test set samples of Recipe1M or Flickr30k:
 
 ```
-python test.py --model_name model --eval_split test --root DATASET_PATH --save_dir /path/to/saved/model/checkpoints
+python test.py --model_name model --eval_split test --root DATASET_PATH --save_dir saved_checkpoints
 ```
-
-
 
 - Compute MedR and recall metrics for the extracted feature set:
 
 ```
-python eval.py --embeddings_file /path/to/saved/model/checkpoints/model/feats_test.pkl --medr_N 10000
+python eval.py --embeddings_file saved_checkpoints/model/feats_test.pkl --retrieval_mode image2recipe --medr_N 1000
 ```
 
 
@@ -101,17 +88,16 @@ python eval.py --embeddings_file /path/to/saved/model/checkpoints/model/feats_te
 
 
 
-- We provide pretrained model weights under the `checkpoints` directory. Make sure you run `git lfs pull` to download the model files.
-- Extract the zip files. For each model, a folder named `MODEL_NAME` with two files, `args.pkl`, and `model-best.ckpt` is provided.
+- We have provided the model trained on the Recipe1M and Flickr30k datasets, please download and unzip it. Please download from the [link]().
 - Extract features for the test set samples of Recipe1M using one of the pretrained models by running:
 
 ```
-python test.py --model_name MODEL_NAME --eval_split test --root DATASET_PATH --save_dir ../checkpoints
+python test.py --model_name model --eval_split test --root DATASET_PATH --save_dir saved_checkpoints
 ```
 
 
 
-- A file with extracted features will be saved under `../checkpoints/MODEL_NAME`.Pretrained models
+- A file with extracted features will be saved under `../saved_checkpoints/MODEL_NAME`.Pretrained models
 
 ##  Acknowledgements
 
